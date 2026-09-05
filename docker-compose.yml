@@ -1,0 +1,12 @@
+services:
+  ps2-opl-smb:
+    build: .
+    image: ps2-opl-smb
+    container_name: ps2-opl-smb
+    restart: unless-stopped
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - ./data:/srv/samba
+      - ./smb.conf:/etc/samba/smb.conf:ro
