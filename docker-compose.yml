@@ -8,5 +8,4 @@ services:
       - "139:139"
       - "445:445"
     volumes:
-      - ./data:/srv/samba
-      - ./smb.conf:/etc/samba/smb.conf:ro
+      - /Volumes/WANDERER/PS2SMB:/srv/samba
